@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+  <title>Frontend Mentor | Mortgage repayment calculator</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <!--Calculator-->
+    <div class="calculator">
+      
+      <strong>Mortgage Calculator</strong> <u><input type="button" id="clear" value="Clear All" onclick="clear()"></u>
+      
+      <!--Mortgage Calculator-->
+      <div class="mortgageCalculator">
+        <label for="amount">Mortgage Amount</label><br>
+        <div class="simbol" id="simbolAmount">
+          <span class="measuring">&pound;</span>
+          <input type="number" id="amount">
+        </div>
+        <span class="error" id="amountError">This field is required</span>
+      </div>
+
+      <div class="term">
+        <div>
+          <label>Mortgage Term</label>
+          <div class="simbol" id="simbolYears">
+            <input type="number" id="years">
+            <span class="measuring">years</span>
+          </div>
+          <span class="error" id="yearsError">This field is required</span>
+        </div>
+
+        <div>
+          <label for="rate">Interest Rate</label>
+          <div class="simbol" id="simbolRate">
+            <input type="number" id="rate">
+            <span class="measuring">%</span>
+          </div>
+          <span class="error" id="rateError">This field is required</span>
+        </div>
+      </div>
+
+      <div class="radio">
+        <label>Mortgage</label>
+        <div class="radio1">
+          <div class="radio-button">
+            <input type="radio" name="radio" id="repayment">
+            <label for="repayment">Repayment</label>
+          </div>
+        </div>
+
+        <div class="radio2">
+          <div class="radio-button">
+            <input type="radio" name="radio" id="interestOnly">
+            <label for="interestOnly">Interest Only</label>
+          </div>
+        </div>
+      </div>
+      <span class="error" id="radioError">This field is required</span>
+
+      <div class="submit">
+        <button type="submit" id="submit"><img src="assets/images/icon-calculator.svg" alt=""> Calculate
+          Repayments</button>
+      </div>
+    </div>
+
+    <aside class="result">
+      <div class="beforeResultBox" id="beforeResultBox"> 
+        <div class="beforeResult" id="beforeResult">
+          <img src="assets/images/illustration-empty.svg" alt="">
+          <h3>Result shown here</h3>
+          <p>Complete the form and click “calculate repayments” to</p>
+          <p>see what your monthly repayments would be.</p>
+        </div>
+      </div>
+
+      <div class="afterResultBox" id="afterResultBox">
+        <h3>Your result</h3>
+        <p>Your results are shown below based on the information you provided. To adjust the result, edit the form and
+          click "calculate repayment" again</p>
+        <div class="afterResult">
+          <p>Your monthly repayment</p>
+          <div class="mountly">
+            <span>&pound;</span><input type="text" id="displayMountly" disabled>
+          </div>
+          <hr>
+          <p>Total you'll repay over the term</p>
+          <div class="total">
+            <span>&pound;</span><input type="text" id="displayTotal" >
+          </div>
+        </div>
+      </div>
+
+    </aside>
+  </div>
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
+    Coded by <a href="#">Sabda Gusti S</a>.
+  </div>
+
+  <script src="index.js"></script>
+</body>
+
+</html>

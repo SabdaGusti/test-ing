@@ -1,0 +1,382 @@
+body,
+html,
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: 'Plus Jakarta Sans';
+    src: url(assets/fonts/PlusJakartaSans-VariableFont_wght.ttf);
+    font-style: normal;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #e3f4fc;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.container {
+    margin-top: 80px;
+    background-color: #ffffff;
+    width: 700px;
+    height: 450px;
+    border-radius: 20px;
+    display: flex;
+
+}
+
+
+.calculator {
+    background-color: #ffffff;
+    width: 350px;
+    border-radius: 20px;
+    color: #133040;
+    margin: 30px;
+    height: auto;
+
+}
+
+#clear {
+    margin-left: 72px;
+    font-size: x-small;
+    background-color: #ffffff;
+    color: #7593a7;
+    border: none;
+    border-bottom: 1px solid #7593a7;
+}
+
+input[type='button']:hover {
+    cursor: pointer;
+}
+
+input[type='number'] {
+    height: 30px;
+}
+
+.term div label,
+.calculator div label,
+.radio div label {
+    font-size: small;
+}
+
+
+.term {
+    display: flex;
+    gap: 15px;
+}
+
+.measuring {
+    display: inline;
+    font-size: small;
+}
+
+.term div div {
+    display: flex;
+}
+
+.term div .simbol input[type="number"] {
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+
+.simbol .measuring {
+    height: 40px;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+
+}
+
+.calculator .mortgageCalculator .simbol input[type="number"] {
+    width: 252px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border: none;
+    height: 40px;
+    outline: none;
+    padding-left: 5px;
+}
+
+
+.simbol {
+    height: 40px;
+    background-color: #e3f4fc;
+    border: 1px solid #384013;
+    border-radius: 5px;
+}
+
+
+
+.red {
+    border: 1px solid red;
+    color: white;
+    background-color: red;
+}
+
+.green {
+    border: 1px solid #f0f478;
+    color: white;
+    background-color: #d9db30;
+}
+
+.term .simbol input[type="number"] {
+    width: 70%;
+    border: none;
+    height: 40px;
+    border-radius: 5px;
+    outline: none;
+    padding-left: 5px;
+}
+
+.error {
+    display: none;
+    color: red;
+    font-size: 10px;
+}
+
+
+.radio div .radio-button {
+    border: 1px solid #133040;
+    border-radius: 5px;
+    margin-left: -1px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    gap: 10px;
+}
+
+
+.radio div:hover {
+    border-color: #d9db30;
+}
+
+.radio-button input[type="radio"] {
+    appearance: none;
+    /* Menghapus tampilan default */
+    -webkit-appearance: none;
+    width: 12px;
+    height: 12px;
+    border: 2px solid #133040;
+    border-radius: 50%;
+    outline: none;
+    cursor: pointer;
+    position: relative;
+}
+
+.radio-button input[type="radio"]:checked {
+    background-color: #ffffff;
+    /* Warna hijau ketika dipilih */
+    border-color: #d9db30;
+}
+
+.radio-button input[type="radio"]:checked::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 5px;
+    height: 5px;
+    background-color: #d9db30;
+    /* Warna dalam lingkaran */
+    border-radius: 50%;
+}
+
+.radio div.selected {
+    background-color: #fafada;
+    border-color: #d9db30;
+}
+
+.radio div div label {
+    font-weight: bold;
+}
+
+.radio2 {
+    margin-top: 10px;
+}
+
+
+.mortgageCalculator,
+.term,
+.radio {
+    margin-top: 15px;
+}
+
+.submit {
+    margin-top: 30px;
+
+}
+
+button {
+    width: 200px;
+    height: 40px;
+    border: none;
+    border-radius: 20px;
+    background-color: #d9db30;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+button i {
+    margin-right: 7px;
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: #f0f478;
+}
+
+button img {
+    width: 20px;
+    margin-right: 5px;
+}
+
+.result {
+    width: 348px;
+    background-color: #133040;
+    border-radius: 20px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 70px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+
+}
+
+.result .beforeResultBox {
+    display: inline;
+}
+
+.result .beforeResult {
+    width: 290px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.result img {
+    width: 150px;
+}
+
+.result h3 {
+    margin: 10px;
+}
+
+.result p {
+    color: #e3f4fc;
+    font-size: 11px;
+    justify-content: center;
+
+}
+
+.afterResultBox {
+    display: none;
+}
+
+.afterResultBox {
+    width: 290;
+}
+
+.afterResult {
+    width: 230px;
+    margin-top: 20px;
+    background-color: #0c202b;
+    height: 200px;
+    border-radius: 10px;
+    border-top: 3px solid #d9db30;
+    padding: 30px;
+    color: #d9db30;
+}
+
+.afterResult .mountly {
+    margin-top: 20px;
+    height: 60px;
+    display: flex;
+}
+
+.afterResultBox h3 {
+    margin-left: -1px;
+}
+
+.afterResult span {
+    margin-top: -5px;
+}
+
+.afterResult .mountly span,
+.afterResult .mountly input {
+    font-size: 50px;
+    color: #d9db30;
+    background-color: #0c202b;
+    border: none;
+    outline: none;
+}
+
+.afterResult div input {
+    width: 200px;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background-color: rgb(121, 121, 121);
+    margin: 20px 0;
+}
+
+.afterResult .total span,
+.afterResult .total input {
+    font-size: 20px;
+    font-weight: bol;
+    color: #ffffff;
+    margin-top: 10px;
+    background-color: #0c202b;
+    border: none;
+    outline: none;
+}
+
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Ubah flex-direction menjadi column untuk tampilan mobile */
+        width: 100%; /* Sesuaikan lebar container */
+        height: 60%; /* Sesuaikan tinggi container */
+        margin-top: 0;
+        border-radius: 0;
+    }
+    
+    .calculator, 
+    .result {
+        width: 90%; /* Sesuaikan lebar elemen */
+        margin: 10px auto; /* Tambahkan margin auto untuk perataan */
+        
+    }
+    
+    .calculator .mortgageCalculator .simbol input[type="number"] {
+        width: 89%;
+    }
+
+    .result {
+        border-bottom-left-radius: 0; /* Atur ulang border radius pada result untuk mobile */
+        border-top-left-radius: 0;
+    }
+
+    
+}
